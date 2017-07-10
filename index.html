@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <!--
-        Include react.js, babel.js e react-dom.js 
-        
+        Include react.js, babel.js e react-dom.js
+
     -->
 
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
@@ -17,27 +17,28 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-		
-		function Hello(){
-				
-				return <h1> Hello </h1>
-		}	
-	
 
-<!-- 	 	var product = {name:"apple",stock:0}
+    // ar product = {name:"apple",stock:0}
+    //
+	  //   if(product.stock > 0){
+    //
+	  //       var element = <h1>The product named {product.name} is not in stock</h1>
+	  //   }
+    //
+	  //   else{
+    //
+	  //       var element = <h1>The product named {product.name} and has {product.stock} units in stock</h1>
+	  //   }
 
-	    if(product.stock > 0){
-	     
-	        var element = <h1>The product named {product.name} is not in stock</h1>
-	    }
+		function sendMessage(props){
+			return <h1> Functional Components {props} </h1>
+		}
 
-	    else{
-	     
-	        var element = <h1>The product named {product.name} and has {product.stock} units in stock</h1>
-	    }
- -->
+    var element = sendMessage("Test");
+
+
 	    ReactDOM.render(
-	        <Hello/>,
+	        element,
 	        document.getElementById("root")
 	    )
 
