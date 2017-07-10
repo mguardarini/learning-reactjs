@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--
+        Include react.js, babel.js e react-dom.js
+
+    -->
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    function Feature(props){
+        // if(props.active == true){
+        //     return <h1> The feature is ON </h1>
+        // }
+        // else{
+        //   return <h1> The feature is OFF </h1>
+        // }
+        // if(props.active == false){
+        //   return null
+        // }
+        // else{
+        //   return <h1> The feature is ON </h1>
+        // }
+        return props.active && <h1> The feature is ON </h1>
+    }
+
+
+    ReactDOM.render(
+        <Feature active={true}/>,
+        document.getElementById("root")
+    )
+    </script>
+
+</body>
+
+</html>
