@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--
+        Include react.js, babel.js e react-dom.js
+
+    -->
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    function CarTitle(props){
+        return <h1> props.title </h1>
+    }
+
+    function Label(props){
+        return <h3> props.label </h3>
+    }
+
+    function CheckBox(props){
+
+    }
+
+    function DropDown(props){
+
+    }
+
+    function ListItem(props){
+        return (<li>{props.item}</li>)
+    }
+
+    function Category(props) {
+        var content = [];
+        for (var i = 0; i < props.data.length; i++) {
+          content.push(
+            <Table
+              year={props.data[i].year}
+              model={props.data[i].model}
+              price={props.data[i].price}
+            />
+          );
+        }
+
+        return (
+          <div>
+            <h2>{props.title}</h2>
+            {content}
+          </div>
+        );
+    }
+
+    function CarApp(props){
+
+    }
+
+    ReactDOM.render(
+        <CarApp/>,
+        document.getElementById("root")
+    )
+    </script>
+
+</body>
+
+</html>
